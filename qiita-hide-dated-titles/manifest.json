@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Qiita: Hide Dated Titles",
+  "version": "1.0.0",
+  "description": "Hide Qiita list items whose titles contain full dates (year-month-day).",
+  "content_scripts": [
+    {
+      "matches": ["https://qiita.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
