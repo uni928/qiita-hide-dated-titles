@@ -84,6 +84,7 @@
   }
 
   function scan(root = document) {
+    if (location.pathname.includes("/items/")) return;
     const titles = findTitleElements(root);
     for (const t of titles) hideIfDated(t);
   }
@@ -105,4 +106,5 @@
     childList: true,
     subtree: true
   });
+
 })();
